@@ -1,0 +1,114 @@
+<html>
+    <style>
+        body{background-color: black;
+        text-align: center;
+    align-items: center;
+margin-top: 100px;}
+    .bn29{margin-top: 250px;}
+                input[type="text"] { 
+                    
+            font-size: 18px;
+            width: 200px;
+            /* عرض تکس باکس */
+            margin: 10px;
+            /* فاصله بین تکس باکس‌ها */
+            padding: 10px;
+            /* فاصله داخلی تکس باکس */
+            border: 1px double rgb(155, 185, 20);
+            /* حاشیه */
+            background-color: black;
+            /* رنگ پس‌زمینه */
+            color: gold;
+            border-radius: 5px;
+            /* گوشه‌های گرد */
+           
+
+        }
+
+        input[type="text"]:hover {
+            box-shadow: 1px 3px 5px white;
+            transition: 0.3s;
+        }
+       .bn29 {
+  border: none;
+  padding: 0.8em 2.5em;
+  outline: none;
+  color: white;
+  font-style: 1.2em;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  background: none;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.45);
+}
+
+.bn29:before,
+.bn29:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 10em;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  width: 105%;
+  height: 105%;
+  content: "";
+  z-index: -2;
+  background-size: 400% 400%;
+  background: linear-gradient(
+    60deg,
+    #f79533,
+    #f37055,
+    #ef4e7b,
+    #a166ab,
+    #5073b8,
+    #1098ad,
+    #07b39b,
+    #6fba82
+  );
+}
+
+.bn29:before {
+  -webkit-filter: blur(7px);
+  filter: blur(7px);
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  -webkit-animation: pulse 10s infinite ease;
+  animation: pulse 10s infinite ease;
+}
+
+.bn29:after {
+  -webkit-filter: blur(0.3px);
+  filter: blur(0.3px);
+}
+
+.bn29:hover:before {
+  width: 115%;
+  height: 115%;
+}
+    </style>
+    <body>
+        <script> 
+            function be(){
+                var text = document.getElementById("txt").value ;
+                switch (text){
+                    case "ماشین حساب":
+                        location.replace("file:///C:/Users/admin/Desktop/uu.html");
+                        break;
+                        case "دیجی کالا":
+                            location.replace("https://www.digikala.com");
+                            break;
+                            case "تخفیف":
+                                location.replace("file:///D:/%D8%AA%D8%AE%D9%81%DB%8C%D9%81.html");
+                                break;
+                            default:
+                                window.alert("not found !!");
+                                break;
+                }
+            }
+            </script>
+<button class="bn29" onclick="be()">Search</button>
+          <input type="text" id="txt"/>
+           
+    </body>
+</html>
