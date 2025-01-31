@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link  rel="website icon" type="jpg" href="file:///C:/Users/admin/Pictures/Annotation%202025-01-20%20192241.png"/>
+    <title>caculator</title>
+    <style>
+      #centertext{margin-left: -7%;}
+
+        body {
+            margin-left: 50px;
+            font-size: clamp(0rem,0vw,9rem);
+            align-items: center;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            
+        }
+
+        .marginii {
+            margin-top: 200px;
+        }
+
+        h1 {
+            text-shadow: 2px 5px 7px rgba(0, 0, 255, 0.838);
+            font-size: 48px;
+            color: rgba(255, 255, 255, 0.844);
+
+            margin-top: -10%;
+        }
+
+        input[type="text"] {
+            font-size: 18px;
+            width: 200px;
+            /* عرض تکس باکس */
+            margin: 10px;
+            /* فاصله بین تکس باکس‌ها */
+            padding: 10px;
+            /* فاصله داخلی تکس باکس */
+            border: 1px double rgb(155, 185, 20);
+            /* حاشیه */
+            background-color: black;
+            /* رنگ پس‌زمینه */
+            color: gold;
+            border-radius: 5px;
+            /* گوشه‌های گرد */
+           
+
+        }
+
+        input[type="text"]:hover {
+            box-shadow: 1px 3px 5px white;
+            transition: 0.3s;
+        }
+
+        button {
+            align-items: center;
+            margin: 5px;
+            padding: 10px 15px;
+            /* فاصله داخلی دکمه */
+            border: #ffffff;
+            /* بدون حاشیه */
+            background-color: #444;
+            /* رنگ پس‌زمینه دکمه */
+            color: white;
+            /* رنگ متن دکمه */
+            border-radius: 5px;
+            /* گوشه‌های گرد */
+            cursor: cell;
+            /* حالت ماوس */
+        }
+
+        button:hover {
+            background-color: #666;
+            /* رنگ دکمه در حالت هاور */
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.6),
+                /* سایه سفید */
+                0 0 40px rgba(234, 255, 0, 0.5);
+            /* سایه قرمز */
+            transition: background-color 0.5s, box-shadow 0.5s;
+            /* انیمیشن برای رنگ و سایه */
+            border-radius: 0px;
+        }
+
+        .button-container {
+
+            justify-content: center;
+            /* مرکز چین کردن دکمه‌ها */
+            flex-wrap: wrap;
+            /* اجازه چرخش دکمه‌ها در صورت نیاز */
+
+        }
+
+        .stars {
+            position: fixed;
+            width: 0%;
+            height: 0%;
+        }
+#uuui{margin-left: -7%;}
+        .star {
+            position: absolute;
+            background-color: rgb(255, 255, 255);
+            /* رنگ ستاره‌ها */
+            border-radius: 50%;
+            animation: twinkle 0.5s infinite alternate;
+        }
+
+        @keyframes twinkle {
+            0% {
+                opacity: 0.9;
+            }
+
+            100% {
+                opacity: 0.4;
+            }
+        }
+#iop{margin-left: -7%;}
+        .rrt {
+        margin-left: -7%;
+
+            margin: 5px;
+            padding: 10px 20px;
+        }
+
+        .opr {
+            padding: 5px 5px;
+        }
+
+        /* اضافه کردن ستاره‌های مختلف */
+        .star:nth-child(1) {
+            top: 10%;
+            left: 20%;
+            width: 2px;
+            height: 2px;
+        }
+
+        .star:nth-child(2) {
+            top: 50%;
+            left: 30%;
+            width: 3px;
+            height: 3px;
+        }
+
+        .star:nth-child(3) {
+            top: 20%;
+            left: 70%;
+            width: 19px;
+            height: 19px;
+        }
+
+        .star:nth-child(4) {
+            top: 80%;
+            left: 40%;
+            width: 1px;
+            height: 1px;
+        }
+
+        .star:nth-child(5) {
+            top: 30%;
+            left: 80%;
+            width: 2.5px;
+            height: 2.5px;
+        }
+
+        .star:nth-child(6) {
+            top: 60%;
+            left: 10%;
+            width: 3.5px;
+            height: 3.5px;
+        }
+
+        .star:nth-child(7) {
+            top: 15%;
+            left: 90%;
+            width: 2px;
+            height: 2px;
+        }
+
+        .star:nth-child(8) {
+            top: 90%;
+            left: 25%;
+            width: 1.5px;
+            height: 1.5px;
+        }
+
+        .star:nth-child(9) {
+            top: 40%;
+            left: 55%;
+            width: 2.2px;
+            height: 2.2px;
+        }
+
+        .star:nth-child(10) {
+            top: 70%;
+            left: 65%;
+            width: 1px;
+            height: 1px;
+        }
+
+        .star:nth-child(11) {
+            top: 19%;
+            left: 22%;
+            width: 4px;
+            height: 4px;
+        }
+
+        .star:nth-child(12) {
+            top: 7%;
+            left: 30%;
+            width: 7px;
+            height: 7px;
+        }
+
+        .star:nth-child(13) {
+            top: 40%;
+            left: 55%;
+            width: 5px;
+            height: 5px;
+        }
+
+        .star:nth-child(14) {
+            top: 87%;
+            left: 43%;
+            width: 1px;
+            height: 1px;
+        }
+
+        .star:nth-child(15) {
+            top: 39%;
+            left: 38%;
+            width: 4.5px;
+            height: 4.5px;
+        }
+
+        .star:nth-child(16) {
+            top: 10%;
+            left: 80%;
+            width: 6.5px;
+            height: 6.5px;
+        }
+
+        .star:nth-child(17) {
+            top: 19%;
+            left: 94%;
+            width: 2px;
+            height: 2px;
+        }
+
+        .star:nth-child(18) {
+            top: 95%;
+            left: 22%;
+            width: 3.5px;
+            height: 3.5px;
+        }
+
+        .star:nth-child(19) {
+            top: 46%;
+            left: 56%;
+            width: 2.2px;
+            height: 2.2px;
+        }
+
+        .star:nth-child(20) {
+            top: 0%;
+            left: 65%;
+            width: 1px;
+            height: 1px;
+        }
+
+        .star:nth-child(20) {
+            top: 90%;
+            left: 80%;
+            width: 20px;
+            height: 20px;
+        }
+
+
+
+
+        .cf {
+            margin-left: -7%;
+            margin-top: -20px;
+            padding: 10px 20px;
+        }
+        .kf{
+
+        margin-left: -7%;
+        }
+
+        #co {
+            
+            padding: 10px 20px;
+
+
+            #iop {
+                padding: 10px 20px;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <script>
+
+        function no() {
+            var num1a = Number(document.getElementById("num1").value);
+            var num1b = Number(document.getElementById("num2").value);
+            document.getElementById("answer").value = (num1a + num1b);
+        }
+        function noi() {
+            var num2a = Number(document.getElementById("num1").value);
+            var num2b = Number(document.getElementById("num2").value);
+            document.getElementById("answer").value = num2a - num2b;
+        }
+        function noie() {
+            var num3a = document.getElementById("num1").value;
+            var num3b = document.getElementById("num2").value;
+            document.getElementById("answer").value = num3a * num3b;
+        }
+        function noiez() {
+            var num4a = Number(document.getElementById("num1").value);
+            var num4b = Number(document.getElementById("num2").value);
+            document.getElementById("answer").value = num4a / num4b;
+            if (num4b == 0) {
+                window.alert("تقسیم بر ۰ ممکن نیست ");
+                document.getElementById("answer").value = "❌";
+            }
+            if ((num4a == 0) && (num4b == 0)) {
+                document.getElementById("answer").value = "∞"
+
+            }
+        }
+        function pow() {
+            var num5a = Number(document.getElementById("num1").value);
+            var num5b = Number(document.getElementById("num2").value);
+            document.getElementById("answer").value = Math.pow(num5a, num5b);
+        }
+        function perecent() {
+            var num5a = Number(document.getElementById("num1").value);
+            var num5b = Number(document.getElementById("num2").value);
+            document.getElementById("answer").value = num5a % num5b;
+        }
+        function mo() {
+            var num6a = Number(document.getElementById("centertext").value);
+            document.getElementById("answertwo").value = (num6a * 9 / 5) + 32;
+        }
+        function moo() {
+            var num7a = Number(document.getElementById("centertext").value);
+            document.getElementById("answertwo").value = (num7a - 32) * 5 / 9;
+        }
+        function mooo() {
+            var num8a = Number(document.getElementById("centertext").value);
+            document.getElementById("answertwo").value = num8a + 273.15
+        }
+        function moon() {
+            var num9a = Number(document.getElementById("centertext").value);
+            document.getElementById("answertwo").value = ((num9a - 32) * 5 / 9) + 273.15;
+        }
+        function moonu() {
+
+            var num99a = Number(document.getElementById("centertext").value);
+            document.getElementById("answertwo").value = ((num99a - 273.15) * 9 / 5) + 32;
+
+        }
+        function ko() {
+            var num90a = Number(document.getElementById("centertext").value);
+            document.getElementById("answertwo").value = num90a - 273.15;
+        }
+        function sqrt() {
+            var num9oa = Number(document.getElementById("uuui").value);
+            document.getElementById("ans").value = Math.sqrt(num9oa);
+        }
+        function spi() {
+            window.alert("برای بدست اوردن مساحت دایره بایستی شعاع ان را وارد کنید  شعاع = نصف قطر")
+            var num10oa = Number(document.getElementById("uuui").value);
+            document.getElementById("ans").value = Math.PI * Math.pow(num10oa, 2);
+        }
+        function vpi() {
+            var num99oa = Number(document.getElementById("uuui").value);
+            document.getElementById("ans").value = 2 * Math.PI * (num99oa);
+        }
+        function rou() {
+            var num9yoa = Number(document.getElementById("uuui").value);
+            document.getElementById("ans").value = Math.round(num9yoa);
+
+        }
+        function sin() {
+            var num9oa = Number(document.getElementById("uuui").value);
+            document.getElementById("ans").value = Math.sin(num9oa);
+        }
+        function cos() {
+            var num9oa = Number(document.getElementById("uuui").value);
+            document.getElementById("ans").value = Math.cos(num9oa);
+        }
+        function cos() {
+            var num9oa = Number(document.getElementById("uuui").value);
+            document.getElementById("ans").value = Math.cos(num9oa);
+        }
+        function tany() {
+            var num9oa = Number(document.getElementById("uuui").value);
+            document.getElementById("ans").value = Math.log2(num9oa);
+        }
+
+        function ce1() {
+            document.getElementById("num1").value = "";
+            document.getElementById("num2").value = "";
+            document.getElementById("answer").value = "";
+        }
+        function ce2() {
+            document.getElementById("centertext").value = "";
+
+            document.getElementById("answertwo").value = "";
+        }
+        function ce3() {
+            document.getElementById("uuui").value = "";
+
+            document.getElementById("ans").value = "";
+        }
+
+    </script>
+    <h1>caculator</h1>
+    
+</body>
+<div class="marginii">
+    <input type="text" id="num1" class="textw" placeholder="نوشته شماره ۱">
+    <input type="text" id="num2" class="textq" placeholder="نوشته شماره ۲">
+
+
+
+    <div class="button-container">
+        <button onclick="no()">+</button>
+        <button onclick="noi()">-</button>
+        <button onclick="noie()">*</button>
+        <button onclick="noiez()">/</button>
+
+
+        </br>
+        <button class="uui" onclick="pow()">^</button>
+        <button class="uuie" onclick="perecent()">%</button>
+
+    </div>
+    <input type="text" id="answer" class="TEXTRO" placeholder="جواب">
+    <button class="opr" onclick="ce1()">CE</button>
+    </br>
+</br>
+</br>
+
+
+
+    <input type="text" id="centertext" name="c" placeholder="tempitureل" />
+    </br>
+    <button class="cf" id="co" onclick="mo()">c.f</button>
+    <button class="fc" id="co" onclick="moo()">f.c</button>
+    <button class="ck" id="co" onclick="mooo()">c.k</button>
+    <button class="fk" id="co" onclick="moon()">f.k</button>
+    </br>
+    <button class="kf" id="co" onclick="moonu()">k.f</button>
+    <button class="kc" id="co" onclick="ko()">k.c</button>
+    </br>
+    <input type="text" id="answertwo" class="TEXTR" name="ca" placeholder="جواب">
+    <button class="opr" onclick="ce2()">CE</button>
+    
+</br>
+</br>
+</br>
+
+
+
+    <input type="text" id="uuui" name="coi" placeholder="نوشته " />
+    </br>
+
+    <button class="rrt" id="iop" onclick="sqrt()">√  </button>
+    <button  onclick="spi()"> sO</button>
+    <button  onclick="vpi()"> vO</button>
+    <button  onclick="rou()">ro </button>
+    </br>
+
+    <button class="pp" id="iop" onclick="sin()">sin</button>
+    <button  onclick="cos()">cos</button>
+    <button  onclick="tany()">lg2</button>
+    <button  onclick="cotan()">lg10</button>
+    </br>
+    <input type="text" id="ans" class="TEXTR" name="ca" placeholder="جواب">
+    <button class="opr" onclick="ce3()">CE</button>
+    </body>
+    </body>
+</div>
+</html>
