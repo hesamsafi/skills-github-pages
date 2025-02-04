@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+<style>
+    body{    display: flex;  
+    justify-content: center;        
+    align-items: center;  
+    height: 100vh;  
+    margin: 0;  
+overflow: hidden;
+}
+    .jj{
+   margin-left: 20px;
+  border-radius: 10px 0px 10px 0px;
+  border-color: blue;
+  border-style:solid;
+        padding: 40px 40px;
+        text-align: center;
+        gap: 15px;
+        background: #c873fd;
+        transition: 0.3s ease;
+        color: aliceblue;
+        
+        
+    }
+   .container:hover>:not(:hover){
+    filter: blur(4px);
+   }
+
+    
+        
+       
+    </style>
+     
+     <script>
+        function y1(id){
+            location.replace("https://www.digikala.com");
+        }
+        function y2(id){
+            location.replace("https://www.alibaba.ir/");
+        }
+        function y3(id){
+            location.replace("http://lms.cybertalk.academy/login/index.php");
+        }
+        function y4(id){
+            location.replace("https://fr.wiktionary.org/wiki/bagi");
+        }
+    
+     </script>
+<body >
+    <div class="container"/>
+    <input type="button" class="jj" id="y1" onclick="y1(id)" value=" digikala "/>
+    <input type="button" class="jj" id="yy" onclick="y2(id)" value=" alibaba "/>
+    <input type="button" class="jj" id="yy" onclick="y3(id)" value="cybertalk"/>
+    <input type="button" class="jj" id="yy" onclick="y4(id)" value="   bagi  "/>
+    </div>
+
+</body>
+</html>
